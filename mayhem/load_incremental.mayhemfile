@@ -1,0 +1,7 @@
+project: automerge-rs
+target: load-incremental
+
+cmds:
+  - cmd: /load_incremental
+  - cmd: /load_incremental_no_inst @@
+    libfuzzer: false
