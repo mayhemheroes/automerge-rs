@@ -1,0 +1,7 @@
+project: automerge-rs
+target: decode-state
+
+cmds:
+  - cmd: /decode_state
+  - cmd: /decode_state_no_inst @@
+    libfuzzer: false
