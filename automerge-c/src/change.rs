@@ -19,7 +19,7 @@ macro_rules! to_change {
 
 /// \struct AMchange
 /// \brief A group of operations performed by an actor.
-#[derive(PartialEq)]
+#[derive(Eq, PartialEq)]
 pub struct AMchange {
     body: *mut am::Change,
     c_msg: RefCell<Option<CString>>,

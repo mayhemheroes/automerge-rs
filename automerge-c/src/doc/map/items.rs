@@ -116,7 +116,7 @@ impl From<Detail> for [u8; USIZE_USIZE_USIZE_] {
 /// \struct AMmapItems
 /// \brief A random-access iterator over a sequence of map object items.
 #[repr(C)]
-#[derive(PartialEq)]
+#[derive(Eq, PartialEq)]
 pub struct AMmapItems {
     /// An implementation detail that is intentionally opaque.
     /// \warning Modifying \p detail will cause undefined behavior.

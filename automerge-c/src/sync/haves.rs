@@ -146,7 +146,7 @@ impl From<Detail> for [u8; USIZE_USIZE_USIZE_USIZE_] {
 /// \struct AMsyncHaves
 /// \brief A random-access iterator over a sequence of synchronization haves.
 #[repr(C)]
-#[derive(PartialEq)]
+#[derive(Eq, PartialEq)]
 pub struct AMsyncHaves {
     /// An implementation detail that is intentionally opaque.
     /// \warning Modifying \p detail will cause undefined behavior.

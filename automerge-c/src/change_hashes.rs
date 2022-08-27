@@ -119,7 +119,7 @@ impl From<Detail> for [u8; USIZE_USIZE_USIZE_] {
 /// \struct AMchangeHashes
 /// \brief A random-access iterator over a sequence of change hashes.
 #[repr(C)]
-#[derive(PartialEq)]
+#[derive(Eq, PartialEq)]
 pub struct AMchangeHashes {
     /// An implementation detail that is intentionally opaque.
     /// \warning Modifying \p detail will cause undefined behavior.

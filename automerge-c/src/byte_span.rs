@@ -3,7 +3,7 @@ use automerge as am;
 /// \struct AMbyteSpan
 /// \brief A contiguous sequence of bytes.
 #[repr(C)]
-#[derive(PartialEq)]
+#[derive(Eq, PartialEq)]
 pub struct AMbyteSpan {
     /// A pointer to an array of bytes.
     /// \warning \p src is only valid until the `AMfree()` function is

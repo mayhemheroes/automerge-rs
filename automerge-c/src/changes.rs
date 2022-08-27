@@ -142,7 +142,7 @@ impl From<Detail> for [u8; USIZE_USIZE_USIZE_USIZE_] {
 /// \struct AMchanges
 /// \brief A random-access iterator over a sequence of changes.
 #[repr(C)]
-#[derive(PartialEq)]
+#[derive(Eq, PartialEq)]
 pub struct AMchanges {
     /// An implementation detail that is intentionally opaque.
     /// \warning Modifying \p detail will cause undefined behavior.
