@@ -1,0 +1,33 @@
+[package]
+name = "automerge-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.automerge]
+path = ".."
+
+# Prevent this from interfering with workspaces
+[workspace]
+members = ["."]
+
+[profile.release]
+debug = 1
+
+[[bin]]
+name = "decode_state"
+path = "fuzz_targets/decode_state.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "load_incremental"
+path = "fuzz_targets/load_incremental.rs"
+test = false
+doc = false
