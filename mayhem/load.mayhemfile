@@ -1,0 +1,7 @@
+project: automerge-rs
+target: load
+
+cmds:
+  - cmd: /load
+  - cmd: /load_no_inst @@
+    libfuzzer: false

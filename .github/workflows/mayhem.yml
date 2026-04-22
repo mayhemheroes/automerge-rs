@@ -3,6 +3,7 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+  workflow_call:
 
 env:
   REGISTRY: ghcr.io
@@ -52,8 +53,7 @@ jobs:
       fail-fast: false
       matrix:
         mayhemfile:
-        - mayhem/decode_state.mayhemfile
-        - mayhem/load_incremental.mayhemfile
+        - mayhem/load.mayhemfile
 
     steps:
     - uses: actions/checkout@v6
