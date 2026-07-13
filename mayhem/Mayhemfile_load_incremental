@@ -1,0 +1,5 @@
+project: mayhemheroes/automerge-rs
+target: load-incremental
+
+cmds:
+  - cmd: /mayhem/load_incremental
